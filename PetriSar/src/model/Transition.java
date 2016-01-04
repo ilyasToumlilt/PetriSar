@@ -16,20 +16,20 @@ public class Transition implements TransitionIF
 {
 //ens pré et ens POSt
 
-  private List < PlaceIF > pre = new ArrayList <> ();
-  private List < PlaceIF > post = new ArrayList <> ();
+  private List < ArcIF > pre = new ArrayList <> ();
+  private List < ArcIF > post = new ArrayList <> ();
 
    @Override public boolean isEnabled ()
   {
     return false;
   }
 
-   @Override public List < PlaceIF > getPre ()
+   @Override public List < ArcIF > getPre ()
   {
     return pre;
   }
 
-  @Override public List < PlaceIF > getPost ()
+  @Override public List < ArcIF > getPost ()
   {
     return post;
   }

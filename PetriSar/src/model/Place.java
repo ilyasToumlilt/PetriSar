@@ -24,10 +24,15 @@ public class Place implements PlaceIF
   {
     return id;
   }
+   
+   @Override public void setID(String i)
+   {
+       this.id = id;
+   }
 
-  public Place (int init, String id)
+  public Place (String id)
   {
-    this.init = init;
+    this.init = 0;
     this.id = id;
   }
 
