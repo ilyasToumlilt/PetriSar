@@ -145,7 +145,7 @@ class PTNetHandler extends DefaultHandler {
             PlaceIF p = (PlaceIF) stack.peek();
            // PTMarking mark = PtnetFactory.eINSTANCE.createPTMarking();
             // mark.setText(lastint);
-            p.setInit(lastint);
+            p.setIndex(lastint);
             readint = false;
             lastint = null;
             
