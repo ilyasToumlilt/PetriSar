@@ -17,7 +17,7 @@ import petrisar.StateManager;
  *
  * @author 3100161
  */
-public class PetriSar {
+public class BasicPetri {
 
     /**
      * @param args the command line arguments

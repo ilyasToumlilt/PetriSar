@@ -5,6 +5,7 @@
  */
 package basic;
 
+import java.util.HashMap;
 import petrisar.IState;
 
 /**
@@ -18,7 +19,7 @@ class BasicState implements IState {
         this.i = i;
     }
 
-    @Override
+    
     public int getValue() {
         return i;
     }
@@ -43,6 +44,16 @@ class BasicState implements IState {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public HashMap<Integer, Integer> getPlaceMark() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setPlaceMark(int idPlace, int val) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
