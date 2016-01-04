@@ -5,10 +5,13 @@
  */
 package petrisar;
 
+import java.util.HashMap;
 /**
  *
  * @author Maxime Bittan, Redha Gouicem, Ilyas Toumlilt
  */
+
 public interface IState {
-    public int getValue();
+    HashMap<Integer, Integer> getPlaceMark();
+    void setPlaceMark(int idPlace, int val);
 }
