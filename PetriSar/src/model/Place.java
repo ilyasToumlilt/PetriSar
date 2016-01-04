@@ -9,8 +9,9 @@ package model;
  *
  * @author 3260058
  */
-public class Place implements PlaceIF{
-    
-    private int index, init;
-    
+public class Place implements PlaceIF
+{
+
+  private int index, init;
+
 }

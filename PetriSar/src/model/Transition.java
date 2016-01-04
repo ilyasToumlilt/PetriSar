@@ -9,11 +9,12 @@ package model;
  *
  * @author 3260058
  */
-public class Transition implements TransitionIF{
+public class Transition implements TransitionIF
+{
 
-    @Override
-    public boolean isEnabled() {
-        return false;
-    }
-    
+  @Override public boolean isEnabled ()
+  {
+    return false;
+  }
+
 }

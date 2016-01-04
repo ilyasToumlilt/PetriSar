@@ -9,11 +9,16 @@ package model;
  *
  * @author 3260058
  */
-public interface ArcIF {
-    public int getPoids();
-    public void setPoids(int i);
-    
-    public PlaceIF getPlace();
-    public void setPlace(PlaceIF pi);
-    
+public interface ArcIF
+{
+
+  public int getPoids ();
+
+  public void setPoids (int i);
+
+  public PlaceIF getPlace ();
+
+  public void setPlace (PlaceIF pi);
+
+
 }

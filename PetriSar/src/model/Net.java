@@ -12,17 +12,19 @@ import java.util.List;
  *
  * @author 3260058
  */
-public class Net implements NetIF{
+public class Net implements NetIF
+{
 
-    private List<TransitionIF> l = new ArrayList<>();
-    private List<PlaceIF> lp = new ArrayList<>();
-    
-    @Override
-    public List<TransitionIF> getTransition() {
-        return l;
-    }
-    
-    public List<PlaceIF> getListPlace(){
-        return lp;
-    }
+  private List < TransitionIF > l = new ArrayList <> ();
+  private List < PlaceIF > lp = new ArrayList <> ();
+
+   @Override public List < TransitionIF > getTransition ()
+  {
+    return l;
+  }
+
+  public List < PlaceIF > getListPlace ()
+  {
+    return lp;
+  }
 }

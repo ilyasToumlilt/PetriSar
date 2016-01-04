@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author 3260058
  */
-public interface NetIF {
-    public List<TransitionIF>getTransition();
+public interface NetIF
+{
+  public List < TransitionIF > getTransition ();
 }

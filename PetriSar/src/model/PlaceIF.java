@@ -9,6 +9,7 @@ package model;
  *
  * @author 3260058
  */
-public interface PlaceIF {
-    
+public interface PlaceIF
+{
+
 }

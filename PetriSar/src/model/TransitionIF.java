@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author 3260058
  */
-public interface TransitionIF {
-    public boolean isEnabled();
+public interface TransitionIF
+{
+  public boolean isEnabled ();
 }
