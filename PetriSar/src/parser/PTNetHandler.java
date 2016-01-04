@@ -110,7 +110,7 @@ class PTNetHandler extends DefaultHandler {
             // skip
         } else {
             //logger.warning("Unknown XML tag in source file: " + baliseName); //$NON-NLS-1$
-            System.out.println("passage d'element");
+            //System.out.println("passage d'element");
         }
     }
 
@@ -184,7 +184,7 @@ class PTNetHandler extends DefaultHandler {
 
         } else {
             //logger.warning("Unknown XML tag in source file: " + baliseName); //$NON-NLS-1$
-            System.out.println("passage d'element");
+            //System.out.println("passage d'element");
         }
     }
 

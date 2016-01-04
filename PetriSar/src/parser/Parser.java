@@ -64,7 +64,8 @@ public class Parser {
             PetriNet order = ptreader.loadFromXML(fis);
             System.out.println("Read :" + order);
             System.out.println("with order :" + ptreader.getOrder());*/
-           n = loadXML(fis);
+            System.out.println("Parsing "+args[0]+"...");
+            n = loadXML(fis);
             System.out.println("Places : "+ n.getListPlaces().size());
             System.out.println("Transitions : "+ n.getTransition().size());
             for(TransitionIF t : n.getTransition()){
