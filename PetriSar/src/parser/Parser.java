@@ -54,6 +54,10 @@ public class Parser {
         return net;
     }
 
+    /**
+     * Main de test du parseur
+     * @param args Filename
+     */
     public static void main(String[] args) {
         NetIF n = null;
         int cpt = 0;
