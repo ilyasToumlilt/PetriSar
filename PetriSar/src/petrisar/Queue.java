@@ -5,8 +5,10 @@
  */
 package petrisar;
 
-import java.util.Collection;
 import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,24 +16,49 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class Queue implements IQueue {
     private ConcurrentLinkedQueue<IState> queue;
+    private AtomicInteger activeThreads;
     
     public Queue() {
+        this(1);
+    }
+    
+    public Queue(int nbThreads) {
         super();
         this.queue = new ConcurrentLinkedQueue<>();
+        this.activeThreads = new AtomicInteger(nbThreads);
     }
     
     @Override
-    public IState pop() {
-        return queue.poll();
+    public IState pop() throws InterruptedException {
+        IState s = null;
+        int val;
+        while ((s = queue.poll()) == null) {
+            val = this.activeThreads.decrementAndGet();
+            synchronized(this) {
+                try {
+                    this.wait();
+                } catch (InterruptedException ex) {
+                    throw ex;
+                }
+            }
+            this.activeThreads.incrementAndGet();
+        }
+        return s;
     }
 
     @Override
-    public void push(IState state) {
+    public synchronized void push(IState state) {
         queue.add(state);
+        this.notifyAll();
     }
 
     @Override
     public boolean isEmpty() {
         return queue.isEmpty();
+    }
+
+    @Override
+    public void waitOver() {
+        while (this.activeThreads.get() != 0) {}
     }
 }
