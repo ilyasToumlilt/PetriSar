@@ -35,5 +35,9 @@ public class Place implements PlaceIF
     this.init = 0;
     this.id = id;
   }
+  
+  public void setInit(int i){
+      init = i;
+  }
 
 }
