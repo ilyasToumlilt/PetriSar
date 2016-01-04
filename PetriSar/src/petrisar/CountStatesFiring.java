@@ -6,6 +6,8 @@
 package petrisar;
 
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,16 +28,20 @@ public class CountStatesFiring implements IFiring {
     @Override
     public void run() {
         int cpt = 0;
-        while (!queue.isEmpty()) {
+        while (true) {
             cpt++;
-            IState s = queue.pop();
+            IState s;
+            try {
+                s = queue.pop();
+            } catch (InterruptedException ex) {
+                System.out.println("There are "+cpt+" states in this PetriNet.");
+                return;
+            }
             Iterator<IState> it = model.getSucc(s);
             while (it.hasNext()) {
                 IState next = it.next();
                 stateMgr.push(next);
             }
         }
-        System.out.println("There are "+cpt+" states in this PetriNet.");
     }
-    
 }
