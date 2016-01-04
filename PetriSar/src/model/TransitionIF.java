@@ -6,7 +6,6 @@
 package model;
 
 import java.util.List;
-
 /**
  *
  * @author 3260058
@@ -14,4 +13,6 @@ import java.util.List;
 public interface TransitionIF
 {
   public boolean isEnabled ();
+  public List < PlaceIF > getPre ();
+  public List < PlaceIF > getPost ();
 }

@@ -12,6 +12,23 @@ package model;
 public class Place implements PlaceIF
 {
 
-  private int index, init;
+  private int init;
+  private String id;
+
+   @Override public int getInit ()
+  {
+    return init;
+  }
+
+   @Override public String getID ()
+  {
+    return id;
+  }
+
+  public Place (int init, String id)
+  {
+    this.init = init;
+    this.id = id;
+  }
 
 }

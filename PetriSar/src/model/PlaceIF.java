@@ -11,5 +11,7 @@ package model;
  */
 public interface PlaceIF
 {
+  public int getInit ();
+  public String getID ();
 
 }

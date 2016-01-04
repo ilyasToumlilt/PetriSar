@@ -23,8 +23,10 @@ public class Net implements NetIF
     return l;
   }
 
-  public List < PlaceIF > getListPlace ()
+   @Override public List < PlaceIF > getListPlaces ()
   {
     return lp;
   }
+
+
 }
