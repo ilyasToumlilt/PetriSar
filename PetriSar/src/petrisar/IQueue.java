@@ -10,7 +10,9 @@ package petrisar;
  * @author Maxime Bittan, Redha Gouicem, Ilyas Toumlilt
  */
 public interface IQueue {
-    public IState pop();
+    public IState pop() throws InterruptedException;
     public void push(IState state);
     public boolean isEmpty();
+
+    public void waitOver();
 }
