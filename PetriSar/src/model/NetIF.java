@@ -13,5 +13,9 @@ import java.util.List;
  */
 public interface NetIF
 {
+
   public List < TransitionIF > getTransition ();
+
+  public List < PlaceIF > getListPlaces ();
+
 }

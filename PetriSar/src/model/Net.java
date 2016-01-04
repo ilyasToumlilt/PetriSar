@@ -28,5 +28,4 @@ public class Net implements NetIF
     return lp;
   }
 
-
 }
