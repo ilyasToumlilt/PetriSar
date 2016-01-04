@@ -6,7 +6,6 @@
 package petrisar;
 
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  *

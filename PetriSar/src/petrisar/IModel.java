@@ -5,17 +5,13 @@
  */
 package petrisar;
 
+import java.util.Iterator;
+
 /**
  *
  * @author 3100161
  */
-public class PetriSar {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public interface IModel {
+    public IState getInitial();
+    public Iterator<IState> getSucc(IState state);
 }
