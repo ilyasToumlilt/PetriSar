@@ -1,4 +1,9 @@
+package petrisar;
+
+import java.util.HashMap;
+
+
 public interface IState {
-    public int get(int id_place);
-    public void set(int id_place, int marque);
+    HashMap<Integer, Integer> getPlaceMark();
+    void setPlaceMark(int idPlace, int val);
 }
