@@ -12,7 +12,6 @@ import java.util.List;
  */
 public interface TransitionIF
 {
-  public boolean isEnabled ();
   public List < ArcIF > getPre ();
   public List < ArcIF > getPost ();
 }

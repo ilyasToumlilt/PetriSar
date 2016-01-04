@@ -6,22 +6,32 @@
 package petrisar;
 
 import java.util.HashMap;
+import model.NetIF;
 
 /**
  *
  * @author 3005993
  */
 public class State implements IState {
-    private HashMap<Integer, Integer> places;
+    private int[] places;
+    
+    public State(NetIF reseau)
+    {
+        this.places = new int [reseau.getListPlaces().size()];
+    }
+    
+    public State(State s)
+    {
+        this.places = s.places.clone();
+    }
     
     @Override
     public int getPlaceMark(int id_place) {
-        return this.places.get(id_place);
+        return this.places[id_place];
     }
 
     @Override
     public void setPlaceMark(int id_place, int val) {
-        this.places.put(id_place, val);
+        this.places[id_place] = val;
     }
-
 }

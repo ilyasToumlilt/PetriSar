@@ -19,11 +19,6 @@ public class Transition implements TransitionIF
   private List < ArcIF > pre = new ArrayList <> ();
   private List < ArcIF > post = new ArrayList <> ();
 
-   @Override public boolean isEnabled ()
-  {
-    return false;
-  }
-
    @Override public List < ArcIF > getPre ()
   {
     return pre;
