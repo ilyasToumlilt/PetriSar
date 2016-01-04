@@ -1,7 +1,12 @@
+package petrisar;
+
+import java.util.Iterator;
+import model.NetIF;
+
 public class Modele {
-    private Net reseau;
+    private NetIF reseau;
     
-    public Modele(Net reseau)
+    public Modele(NetIF reseau)
     {
 	this.reseau = reseau;
     }
