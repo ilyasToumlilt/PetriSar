@@ -12,13 +12,16 @@ import java.util.HashMap;
  * @author 3005993
  */
 public class State implements IState {
+    private HashMap<Integer, Integer> places;
+    
     @Override
-    public HashMap<Integer, Integer> getPlaceMark() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int getPlaceMark(int id_place) {
+        return this.places.get(id_place);
     }
 
     @Override
-    public void setPlaceMark(int idPlace, int val) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    } 
+    public void setPlaceMark(int id_place, int val) {
+        this.places.put(id_place, val);
+    }
+
 }
