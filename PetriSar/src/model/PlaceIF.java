@@ -7,11 +7,13 @@ package model;
 
 /**
  *
- * @author 3260058
+ * @author Alexis
  */
 public interface PlaceIF
 {
   public int getInit ();
   public String getID ();
-
+  public void setID(String i);
+    public int getIndex();
+    public void setIndex(int index);
 }

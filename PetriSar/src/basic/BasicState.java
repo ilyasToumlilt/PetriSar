@@ -46,13 +46,17 @@ class BasicState implements IState {
         return true;
     }
 
-    @Override
     public HashMap<Integer, Integer> getPlaceMark() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void setPlaceMark(int idPlace, int val) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getPlaceMark(int id_place) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

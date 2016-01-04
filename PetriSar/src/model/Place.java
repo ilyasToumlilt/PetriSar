@@ -14,6 +14,7 @@ public class Place implements PlaceIF
 
   private int init;
   private String id;
+  private int index;
 
    @Override public int getInit ()
   {
@@ -24,11 +25,30 @@ public class Place implements PlaceIF
   {
     return id;
   }
-
-  public Place (int init, String id)
+   
+   @Override public void setID(String i)
+   {
+       this.id = id;
+   }
+   
+  public void setIndex(int index)
   {
-    this.init = init;
+      this.index = index;
+  }
+
+  public Place (String id)
+  {
+    this.init = 0;
     this.id = id;
   }
+  
+  public void setInit(int i){
+      init = i;
+  }
+
+    @Override
+    public int getIndex() {
+        return this.index;
+    }
 
 }

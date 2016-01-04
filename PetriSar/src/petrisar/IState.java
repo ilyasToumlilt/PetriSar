@@ -12,6 +12,6 @@ import java.util.HashMap;
  */
 
 public interface IState {
-    HashMap<Integer, Integer> getPlaceMark();
-    void setPlaceMark(int idPlace, int val);
+    int getPlaceMark(int id_place);
+    void setPlaceMark(int id_place, int val);
 }
