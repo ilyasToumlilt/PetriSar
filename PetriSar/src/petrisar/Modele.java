@@ -9,7 +9,7 @@ import model.PlaceIF;
 import model.Transition;
 import model.TransitionIF;
 
-public class Modele {
+public class Modele implements IModel {
     private NetIF reseau;
     
     public Modele(NetIF reseau)
@@ -17,7 +17,7 @@ public class Modele {
 	this.reseau = reseau;
     }
     
-    public State getInitState()
+    public IState getInitial()
     {
 	State s = new State(reseau);
         int i = 0 ;
@@ -40,14 +40,14 @@ public class Modele {
         return true;
     }
     
-    public Iterator<State> getSucc(State s)
+    public Iterator<IState> getSucc(IState s)
     {
-        ArrayList<State> succs = new ArrayList<State> ();
+        ArrayList<IState> succs = new ArrayList<IState> ();
         int index;
         
         for (TransitionIF t: reseau.getTransition()) {
             if (this.isEnable (t, s)) {
-                State etat = new State(s);
+                State etat = new State((State) s);
                 
                 for (ArcIF a : t.getPre()) {
                     index = a.getPlace().getIndex();
