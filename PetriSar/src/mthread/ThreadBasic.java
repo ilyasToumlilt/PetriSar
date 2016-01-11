@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package basic;
+package mthread;
 
 import java.util.Iterator;
 import petrisar.IModel;
@@ -17,11 +17,12 @@ import petrisar.StateManager;
  *
  * @author 3100161
  */
-public class BasicPetri {
+public class ThreadBasic {
 
     /**
      * @param args the command line arguments
      */
+    /*
     public static void main(String[] args) {
         IQueue queue = new Queue();
         IStateManager stateMgr = new StateManager(queue);
@@ -45,5 +46,6 @@ public class BasicPetri {
         System.out.println("There are "+cpt+" states in this PetriNet.");
         System.out.println("Computed in "+(totalTime)+" ms.");
     }
+    */
     
 }
