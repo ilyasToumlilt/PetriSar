@@ -12,7 +12,7 @@ package model;
 public class Arc implements ArcIF
 {
 
-  private int poids;
+  private int poids=1;
   private PlaceIF pl;
 
    @Override public int getPoids ()

@@ -34,5 +34,11 @@ class StateIterator implements Iterator<IState> {
         this.cur++;
         return bs;
     }
+
+	@Override
+	public void remove() {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
