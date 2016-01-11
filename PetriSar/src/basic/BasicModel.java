@@ -13,7 +13,7 @@ import petrisar.IState;
  *
  * @author 3100161
  */
-class BasicModel implements IModel {
+public class BasicModel implements IModel {
     private int K;
     
     public BasicModel(int k) {
