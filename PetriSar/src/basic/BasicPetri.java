@@ -6,6 +6,8 @@
 package basic;
 
 import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import petrisar.IModel;
 import petrisar.IQueue;
 import petrisar.IState;
@@ -33,7 +35,12 @@ public class BasicPetri {
         
         while (!queue.isEmpty()) {
             cpt++;
-            IState s = queue.pop();
+            IState s;
+            try {
+                s = queue.pop();
+            } catch (InterruptedException ex) {
+                break;
+            }
             Iterator<IState> it = model.getSucc(s);
             while (it.hasNext()) {
                 IState next = it.next();
