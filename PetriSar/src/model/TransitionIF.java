@@ -6,12 +6,18 @@
 package model;
 
 import java.util.List;
+
 /**
  *
  * @author 3260058
  */
-public interface TransitionIF
-{
-  public List < ArcIF > getPre ();
-  public List < ArcIF > getPost ();
+public interface TransitionIF {
+
+    public int getIndex();
+
+   
+    
+    public List< ArcIF> getPre();
+
+    public List< ArcIF> getPost();
 }

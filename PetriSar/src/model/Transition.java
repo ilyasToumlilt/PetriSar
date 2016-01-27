@@ -12,21 +12,30 @@ import java.util.List;
  *
  * @author 3260058
  */
-public class Transition implements TransitionIF
-{
+public class Transition implements TransitionIF {
 //ens pré et ens POSt
 
-  private List < ArcIF > pre = new ArrayList <> ();
-  private List < ArcIF > post = new ArrayList <> ();
+    private List< ArcIF> pre = new ArrayList<>();
+    private List< ArcIF> post = new ArrayList<>();
+    private final int index ;
 
-   @Override public List < ArcIF > getPre ()
-  {
-    return pre;
-  }
+    public Transition(int size) {
+       index = size;
+    }
 
-  @Override public List < ArcIF > getPost ()
-  {
-    return post;
-  }
+    @Override
+    public int getIndex() {
+        return this.index;
+    }
+
+    @Override
+    public List< ArcIF> getPre() {
+        return pre;
+    }
+
+    @Override
+    public List< ArcIF> getPost() {
+        return post;
+    }
 
 }

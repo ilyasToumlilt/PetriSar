@@ -2,8 +2,6 @@ package petrisar;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-
 import model.ArcIF;
 import model.NetIF;
 import model.Place;
@@ -44,7 +42,7 @@ public class Modele implements IModel {
     
     public Iterator<IState> getSucc(IState s)
     {
-        List<IState> succs = new ArrayList<IState> ();
+        ArrayList<IState> succs = new ArrayList<IState> ();
         int index;
         
         for (TransitionIF t: reseau.getTransition()) {
@@ -53,12 +51,12 @@ public class Modele implements IModel {
                 
                 for (ArcIF a : t.getPre()) {
                     index = a.getPlace().getIndex();
-                    etat.setPlaceMark(index, etat.getPlaceMark(index) - a.getPoids());
+                    etat.setPlaceMark(index, s.getPlaceMark(index) - 1);
                 }
                 
                 for (ArcIF a : t.getPost()) {
                     index = a.getPlace().getIndex();
-                    etat.setPlaceMark(index, etat.getPlaceMark(index) + a.getPoids());
+                    etat.setPlaceMark(index, s.getPlaceMark(index) + 1);
                 }
                 
                 succs.add(etat);

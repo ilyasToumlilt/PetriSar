@@ -16,5 +16,5 @@ public interface PlaceIF
   public void setID(String i);
     public int getIndex();
     public void setIndex(int index);
-	public void setInit(int init);
+    public void setInit(int i);
 }

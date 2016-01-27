@@ -42,6 +42,8 @@ class PTNetHandler extends DefaultHandler {
     private boolean doNupn = false;
     private boolean doIt = false;
 
+   private Integer transitionIdx = 0;
+    
     public PTNetHandler() {
     }
 
@@ -78,7 +80,8 @@ class PTNetHandler extends DefaultHandler {
             readint = true;
 
         } else if ("transition".equals(baliseName)) {
-            TransitionIF tr = new Transition();
+            TransitionIF tr = new Transition(net.getTransition().size());
+            
             String id = attributes.getValue("id");
             //tr.setId(id);
             index.put(id, tr);
@@ -145,7 +148,7 @@ class PTNetHandler extends DefaultHandler {
             PlaceIF p = (PlaceIF) stack.peek();
            // PTMarking mark = PtnetFactory.eINSTANCE.createPTMarking();
             // mark.setText(lastint);
-            p.setInit(lastint);
+            p.setInit((int)lastint);
             readint = false;
             lastint = null;
             
